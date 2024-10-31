@@ -2,7 +2,14 @@
 
 ---
 ### Education
-- MASc Software Engineering University of Waterloo
+- **University of Waterloo**  
+  *M.ASc. in Software Engineering*  
+  *2023 – 2025*  
+  Relevant coursework: Software Testing, Software Mining/Analysis, Software Refactoring.
+- **York University**  
+  *B.S. in Computer Science*  
+  *2016 – 2022*  
+  Relevant coursework: Software Design, Database system, E-commerce, Mobile development.
 
 ---
 ### Category Name 1 
