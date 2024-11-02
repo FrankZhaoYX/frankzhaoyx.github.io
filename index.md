@@ -5,7 +5,7 @@
 - **University of Waterloo**  
   *M.ASc. in Software Engineering*  
   *2023 – 2025*  
-  Coursework: Software Testing, Software Analysis, Software Refactoring.
+  Coursework: Software Test, Software Analysis, Software Refactor.
 - **York University**  
   *B.S. in Computer Science*  
   *2016 – 2022*  
