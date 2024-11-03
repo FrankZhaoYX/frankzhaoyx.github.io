@@ -15,19 +15,18 @@
 
 
 ### 2. Project details
-- **BeautifulSoup** – Used for web scraping, specifically to retrieve each movie's director information.
-```javascript
-        raw = mv_info.find_all('li', attrs={'data-testid': 'title-pc-principal-credit'})
-        # Scrape the Director
-        # director_raw = mv_info.find('a', class_='ipc-metadata-list-item__list-content-item ipc-metadata-list-item__list-content-item--link')
-        # print(director_raw.get_text())
-        try:
-            director_raw = raw[0].find_all('a', class_="ipc-metadata-list-item__list-content-item ipc-metadata-list-item__list-content-item--link")
-            director_set = [tmp.get_text() for tmp in director_raw]
-        except:
-            director_set=""
-        # print(director_set)
-        self.directors.append(director_set)
+- **BeautifulSoup** – Used for web scraping, specifically to retrieve each movie's name, and year.
+```python
+    def scrape_mv(self, container):
+        # Scrape the name
+        name = container.find('h3', class_ = 'ipc-title__text').get_text()
+        self.names.append(name)
+        logging.info(f"Current is scraping movie {name}")
+        # Scrape the metadata
+        # metadata_set = container.find_all('span', class_ = 'sc-b189961a-8 hCbzGp dli-title-metadata-item')
+        metadata_set = container.find_all('span', class_ = "sc-ab348ad5-8 cSWcJI dli-title-metadata-item")
+        year = metadata_set[0].get_text()
+        self.years.append(year)
 ```
 - **Requests** – Utilized for retrieving webpage data for each specified year, with robust error handling to manage potential exceptions such as HTTP errors, connection issues, and timeouts. The `bs4_parser` function below demonstrates this setup, where requests are made, errors are logged, and successful responses are parsed with BeautifulSoup:
 
